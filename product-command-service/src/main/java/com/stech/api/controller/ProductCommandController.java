@@ -15,9 +15,7 @@ public class ProductCommandController {
 
     @PostMapping
     public Product createProduct(@RequestBody ProductEvent productEvent){
-        System.out.println("Product Event"+productEvent.getEventType());
-        System.out.println("Product:"+productEvent.getProduct().getName()+"\t "+productEvent.getProduct().getDescription()+" \t"+productEvent.getProduct().getPrice());
-        return productService.createProduct(productEvent);
+       return productService.createProduct(productEvent);
     }
 
     @PutMapping("{id}")
